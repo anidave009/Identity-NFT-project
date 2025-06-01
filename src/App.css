@@ -1,38 +1,166 @@
-.App {
+/* Basic Resets & Page Styling */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2); /* Vibrant gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Card Container */
+.card {
+  background: #fff;
+  padding: 2.5rem 2rem; /* Increased padding */
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  max-width: 450px; /* Slightly wider card */
+  width: 100%;
+  text-align: center; /* Center content within the card */
+}
+
+/* Heading */
+.heading {
+  font-size: 2rem; /* Larger heading */
+  margin-bottom: 1.8rem; /* More space below heading */
+  color: #333; /* Darker text */
+  font-weight: 700; /* Bolder */
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* More spacing between form elements */
+  align-items: stretch; /* Stretch items to full width */
+}
+
+/* Labels */
+.label {
+  font-size: 0.95rem; /* Slightly larger labels */
+  font-weight: 600;
+  color: #555; /* Softer color */
+  text-align: left; /* Align label text to the left */
+  margin-bottom: 0.2rem; /* Small space below label */
+}
+
+/* Text Inputs and Textarea */
+.input {
+  padding: 0.8rem 1rem; /* More padding */
+  border: 1px solid #ddd; /* Lighter border */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.input::placeholder {
+  color: #999; /* Softer placeholder color */
+}
+
+.input:focus {
+  border-color: #6C63FF; /* Highlight border on focus */
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2); /* Subtle glow on focus */
+}
+
+.textarea-input {
+  resize: vertical; /* Allow vertical resizing for bio */
+  min-height: 80px; /* Minimum height for textarea */
+}
+
+/* File Input */
+.file-input {
+  padding: 0.7rem; /* Adjusted padding */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Light background for file input */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-input::-webkit-file-upload-button {
+  background-color: #6C63FF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-input::-webkit-file-upload-button:hover {
+  background-color: #554bc5;
+}
+
+.file-name-display {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: -0.5rem; /* Adjust margin to bring closer to input */
+  text-align: left;
+}
+
+/* Button */
+.button {
+  padding: 1rem 1.5rem; /* More prominent button */
+  background: #6C63FF;
+  color: #fff;
+  font-size: 1.1rem; /* Larger font */
+  font-weight: 700; /* Bolder */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5rem; /* More space above button */
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* All transitions */
+}
+
+.button:hover {
+  background: #554bc5; /* Darker on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.button:active {
+  transform: translateY(0); /* Press down effect */
+  box-shadow: none;
+}
+.nft-gallery {
+  margin-top: 3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nft-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nft-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nft-card:hover {
+  transform: translateY(-5px);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nft-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
 }
