@@ -13,7 +13,7 @@ const CONTRACT_ABI = [
   "function mintNFT(address recipient, string memory tokenURI) public returns (uint256)",
   "function tokenCounter() public view returns (uint256)",
   "function ownerOf(uint256 tokenId) public view returns (address)",
-  "function tokenURI(uint256 tokenId) public view returns (string)",y
+  "function tokenURI(uint256 tokenId) public view returns (string)",
 ];
 
 
